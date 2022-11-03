@@ -1,6 +1,8 @@
+
+
 const SearchBar = (props) => {
     return ( 
-        
+
      );
 }
  
