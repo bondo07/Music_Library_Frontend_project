@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import Table from 'react-bootstrap/Table'
 
 const MusicTable = (props) => {
 
-
+    const [filteredMusic, setFilteredMusic] = useState();
+    
 
     return (
         <Table striped>

@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import MusicTable from './Components/MusicTable/MusicTable';
+import NavBar from './Components/NavBar/NavBar';
+import AddSong from './Components/AddSong/AddSong';
 import axios from 'axios';
+import { Nav } from 'react-bootstrap';
 
 function App() {
 
@@ -18,7 +21,15 @@ function App() {
 
   return (
     <div>
-      <MusicTable allMusic={songs}/>
+      <div>
+        <NavBar/>
+      </div>
+      <div>
+        <AddSong addNewMusic={setSongs}/>
+      </div>
+      <div>
+        <MusicTable allMusic={songs}/>
+      </div>
     </div>
       // <div >
       //   <button onClick={() => getAllSongs()}>Get All Songs</button>
