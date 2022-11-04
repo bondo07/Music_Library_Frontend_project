@@ -17,10 +17,15 @@ const AddSong = (props) => {
     const handleRelease_Date = e => setRelease_Date(e.target.value)
     const handleGenre = e => setGenre(e.target.value)
 
-    function handleSubmit(e) {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const newSong = {title: title, artist: artist, ablum: album, release_date: release_date, genre: genre}
-        props.addNewMusic(newSong);
+        const newSong = {
+            title: title, 
+            artist: artist, 
+            album: album, 
+            release_date: release_date, 
+            genre: genre};
+        createSong(newSong);
         setTitle('')
         setArtist('')
         setAlbum('')
@@ -30,9 +35,11 @@ const AddSong = (props) => {
     
     async function createSong(newSong) {
         const response = await axios.post('http://127.0.0.1:8000/api/music/', newSong);
-        if(response.status === 201) {
-          await getAllSongs();
-        }
+        try {
+            if(response.status === 201) {
+              await props.getAllSongs();
+        }}
+        catch (error) {console.error(error)}
       }
     
     

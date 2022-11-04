@@ -2,8 +2,6 @@ import Table from 'react-bootstrap/Table'
 
 const MusicTable = (props) => {
 
-    
-
     return (
         <Table striped>
             <thead>

@@ -11,7 +11,6 @@ const SearchBar = (props) => {
          })    
          props.setSongs(filteredSongs)
     }
-
     const handleSearch = e => setSearchField(e.target.value)
 
     return ( 
@@ -23,7 +22,7 @@ const SearchBar = (props) => {
                 <button type='submit'>Search</button>
             </div>
             <div>
-                <button type='submit' onClick={setSearchField}>Clear</button>
+                <button onClick={props.getAllSongs}>Clear Filter</button>
             </div>
         </form>
      );

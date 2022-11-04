@@ -26,18 +26,15 @@ function App() {
         <NavBar/>
       </div>
       <div>
-        <SearchBar songs={songs} setSongs={setSongs}/>
+        <SearchBar songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
       </div>
       <div>
-        <AddSong addNewMusic={createSong}/>
+        <AddSong getAllSongs={getAllSongs}/>
       </div>
       <div>
         <MusicTable allMusic={songs}/>
       </div>
     </div>
-      // <div >
-      //   <button onClick={() => getAllSongs()}>Get All Songs</button>
-      // </div>
   );
 }
 
