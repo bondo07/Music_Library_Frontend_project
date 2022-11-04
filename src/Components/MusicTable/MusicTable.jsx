@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import Table from 'react-bootstrap/Table'
 
 const MusicTable = (props) => {
 
-    const [filteredMusic, setFilteredMusic] = useState();
     
 
     return (
@@ -20,12 +18,12 @@ const MusicTable = (props) => {
             <tbody>
                     {props.allMusic.map((songs) => {
                         return (
-                            <tr>
+                            <tr key={songs.id}>
                                 <td>{songs.title}</td>
                                 <td>{songs.artist}</td>
                                 <td>{songs.album}</td>
                                 <td>{songs.release_date}</td>
-                                <tc>{songs.genre}</tc>
+                                <td>{songs.genre}</td>
                             </tr>
                         )
                     })}

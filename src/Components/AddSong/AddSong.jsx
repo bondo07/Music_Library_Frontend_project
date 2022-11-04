@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import axios from 'axios';
 
 
 const AddSong = (props) => {
@@ -7,7 +8,7 @@ const AddSong = (props) => {
     const [title, setTitle] = useState('');
     const [artist, setArtist] = useState('');
     const [album, setAlbum] = useState('');
-    const [release_date, setRelease_Date] = useState(Date());
+    const [release_date, setRelease_Date] = useState('');
     const [genre, setGenre] = useState('');
 
     const handleTitle = e => setTitle(e.target.value)
@@ -23,10 +24,18 @@ const AddSong = (props) => {
         setTitle('')
         setArtist('')
         setAlbum('')
-        setRelease_Date(Date())
+        setRelease_Date('')
         setGenre('')
     }
-
+    
+    async function createSong(newSong) {
+        const response = await axios.post('http://127.0.0.1:8000/api/music/', newSong);
+        if(response.status === 201) {
+          await getAllSongs();
+        }
+      }
+    
+    
     return (
         <Container>
             <form onSubmit={handleSubmit}>

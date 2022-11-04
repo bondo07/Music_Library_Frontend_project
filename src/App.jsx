@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import MusicTable from './Components/MusicTable/MusicTable';
 import NavBar from './Components/NavBar/NavBar';
 import AddSong from './Components/AddSong/AddSong';
+import SearchBar from './Components/SearchBar/SearchBar';
 import axios from 'axios';
 
 function App() {
@@ -18,13 +19,17 @@ function App() {
     setSongs(response.data);
   }
 
+
   return (
     <div>
       <div>
         <NavBar/>
       </div>
       <div>
-        <AddSong addNewMusic={setSongs}/>
+        <SearchBar songs={songs} setSongs={setSongs}/>
+      </div>
+      <div>
+        <AddSong addNewMusic={createSong}/>
       </div>
       <div>
         <MusicTable allMusic={songs}/>
