@@ -1,0 +1,20 @@
+.table_style {
+    box-sizing: border-box;
+    border: 4px solid #bf1313;
+    border-radius: 13px;
+    color: white;
+    margin: auto;
+}
+
+.table_rows {
+    margin-top: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+thead {
+    font-size: x-large;
+}
+
+tbody {
+    font-weight: 700;
+}

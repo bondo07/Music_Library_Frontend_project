@@ -1,3 +1,4 @@
+import './MusicTable.css'
 
 const MusicTable = (props) => {
 
