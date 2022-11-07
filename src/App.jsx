@@ -32,6 +32,7 @@ function App() {
       <div>
         <MusicTable allMusic={songs}/>
       </div>
+      <h1 className='add_message'>Add A Song!</h1>
       <div>
         <AddSong getAllSongs={getAllSongs}/>
       </div>

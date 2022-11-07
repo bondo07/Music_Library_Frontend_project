@@ -1,1 +1,5 @@
-
+.add_message {
+    display: flex;
+    color: #c11f1f;
+    justify-content: center;
+}
