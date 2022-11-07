@@ -1,16 +1,15 @@
-import Table from 'react-bootstrap/Table'
 
 const MusicTable = (props) => {
 
     return (
-        <Table striped>
+        <table className='table_style'>
             <thead>
                 <tr>
                     <th>Title:</th>
                     <th>Artist:</th>
                     <th>Album:</th>
                     <th>Release-Date:</th>
-                    <th>genre</th>
+                    <th>Genre:</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +25,7 @@ const MusicTable = (props) => {
                         )
                     })}
             </tbody>
-        </Table>
+        </table>
     );
 }
  

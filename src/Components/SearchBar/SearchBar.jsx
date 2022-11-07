@@ -14,15 +14,15 @@ const SearchBar = (props) => {
     const handleSearch = e => setSearchField(e.target.value)
 
     return ( 
-        <form onSubmit={handleSubmit}>
-            <div>
+        <form className='form_spacing' onSubmit={handleSubmit}>
+            <div className='search_box'>
                 <input icon='search'  type='text' placeholder='Search here...' value={searchField} onChange={handleSearch}/>
             </div>
-            <div>
-                <button type='submit'>Search</button>
+            <div className='search_button'>
+                <button type='submit' className='form_buttons'>Search</button>
             </div>
             <div>
-                <button onClick={props.getAllSongs}>Clear Filter</button>
+                <button onClick={props.getAllSongs} className='form_buttons'>Clear Filter</button>
             </div>
         </form>
      );

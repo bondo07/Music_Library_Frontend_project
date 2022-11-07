@@ -3,6 +3,7 @@ import MusicTable from './Components/MusicTable/MusicTable';
 import NavBar from './Components/NavBar/NavBar';
 import AddSong from './Components/AddSong/AddSong';
 import SearchBar from './Components/SearchBar/SearchBar';
+import './App.css'
 import axios from 'axios';
 
 function App() {
@@ -29,10 +30,10 @@ function App() {
         <SearchBar songs={songs} setSongs={setSongs} getAllSongs={getAllSongs}/>
       </div>
       <div>
-        <AddSong getAllSongs={getAllSongs}/>
+        <MusicTable allMusic={songs}/>
       </div>
       <div>
-        <MusicTable allMusic={songs}/>
+        <AddSong getAllSongs={getAllSongs}/>
       </div>
     </div>
   );

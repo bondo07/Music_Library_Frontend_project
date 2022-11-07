@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
 import axios from 'axios';
 
 
@@ -44,9 +43,8 @@ const AddSong = (props) => {
     
     
     return (
-        <Container>
-            <form onSubmit={handleSubmit}>
-                <div>
+            <form className='add_song_form' onSubmit={handleSubmit}>
+                <div className='addsong_spacing'>
                     <div>
                         <label>Title</label>
                     </div>
@@ -54,7 +52,7 @@ const AddSong = (props) => {
                         <input type='text' placeholder='Song Title...' value={title} onChange={handleTitle}/>
                     </div>
                 </div>
-                <div>
+                <div className='addsong_spacing'>
                     <div>
                         <label>Artist</label>
                     </div>
@@ -62,7 +60,7 @@ const AddSong = (props) => {
                         <input type='text' placeholder='Artist Name...' value={artist} onChange={handleArtist}/>
                     </div>
                 </div>
-                <div>
+                <div className='addsong_spacing'>
                     <div>
                         <label>Album</label>
                     </div>
@@ -70,7 +68,7 @@ const AddSong = (props) => {
                         <input type='text' placeholder='Album Name...' value={album} onChange={handleAlbum}/>
                     </div>
                 </div>
-                <div>
+                <div className='addsong_spacing'>
                     <div>
                         <label>Release Date</label>
                     </div>
@@ -78,7 +76,7 @@ const AddSong = (props) => {
                         <input type='date' value={release_date} onChange={handleRelease_Date}/>
                     </div>
                 </div>
-                <div>
+                <div className='addsong_spacing'>
                     <div>
                         <label>Genre</label>
                     </div>
@@ -86,11 +84,10 @@ const AddSong = (props) => {
                         <input type='text' placeholder='Genre Type...' value={genre} onChange={handleGenre}/>
                     </div>
                 </div>
-                <div>
-                    <button type='submit'>Add New Song</button>
+                <div className='addsong_spacing'>
+                    <button type='submit'className='add_button'>Add New Song</button>
                 </div>
             </form>
-        </Container>
     );
 }
  

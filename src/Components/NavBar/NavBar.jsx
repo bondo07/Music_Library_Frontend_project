@@ -1,9 +1,13 @@
+import './NavBar.css'
+import dccImage from '../../images/dCC_Transparent_White.png'
 const NavBar = (props) => {
     return ( 
         <nav>
-            <h1>
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoArQd5d7Px80DF8RJ7AGZduqycl_zgwGzzCftoRL3l6l7Q4dbMeFUjz3ow62SH9xOx1s&usqp=CAU'
-                alt='dCC Logo'></img>
+            <h1 className="logo">
+                <img src={dccImage}
+                alt='dCC Logo' 
+                className="img">
+                </img>
                 deeSeeSotify
             </h1>
         </nav>
